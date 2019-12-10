@@ -1,0 +1,14 @@
+prefix=/opt/tmkj_transcode/
+exec_prefix=${prefix}
+libdir=/opt/tmkj_transcode//lib
+includedir=/opt/tmkj_transcode//include
+
+Name: libswscale
+Description: FFmpeg image rescaling library
+Version: 4.8.100
+Requires: libavutil >= 55.78.100
+Requires.private: 
+Conflicts:
+Libs: -L${libdir}  -lswscale -lm
+Libs.private: 
+Cflags: -I${includedir}

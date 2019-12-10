@@ -1,0 +1,14 @@
+prefix=/opt/tmkj_transcode/
+exec_prefix=${prefix}
+libdir=/opt/tmkj_transcode//lib
+includedir=/opt/tmkj_transcode//include
+
+Name: libavcodec
+Description: FFmpeg codec library
+Version: 57.107.100
+Requires: libavutil >= 55.78.100
+Requires.private: 
+Conflicts:
+Libs: -L${libdir}  -lavcodec -L./x265_build/lib -lx265 -L./x264_build_20171106/lib -lx264 -lm -ldl -lbz2 -lz -pthread -pthread
+Libs.private: 
+Cflags: -I${includedir}

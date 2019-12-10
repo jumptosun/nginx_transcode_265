@@ -1,0 +1,14 @@
+prefix=/opt/tmkj_transcode/
+exec_prefix=${prefix}
+libdir=/opt/tmkj_transcode//lib
+includedir=/opt/tmkj_transcode//include
+
+Name: libswresample
+Description: FFmpeg audio resampling library
+Version: 2.9.100
+Requires: libavutil >= 55.78.100
+Requires.private: 
+Conflicts:
+Libs: -L${libdir}  -lswresample -lm
+Libs.private: 
+Cflags: -I${includedir}

@@ -1,0 +1,14 @@
+prefix=/opt/tmkj_transcode/
+exec_prefix=${prefix}
+libdir=/opt/tmkj_transcode//lib
+includedir=/opt/tmkj_transcode//include
+
+Name: libavfilter
+Description: FFmpeg audio/video filtering library
+Version: 6.107.100
+Requires: libswscale >= 4.8.100, libpostproc >= 54.7.100, libswresample >= 2.9.100, libavformat >= 57.83.100, libavcodec >= 57.107.100, libavutil >= 55.78.100
+Requires.private: 
+Conflicts:
+Libs: -L${libdir}  -lavfilter -L./x265_build/lib -lx265 -L./x264_build_20171106/lib -lx264 -lm -ldl -lbz2 -lz -pthread -pthread
+Libs.private: 
+Cflags: -I${includedir}

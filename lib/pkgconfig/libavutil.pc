@@ -1,0 +1,14 @@
+prefix=/opt/tmkj_transcode/
+exec_prefix=${prefix}
+libdir=/opt/tmkj_transcode//lib
+includedir=/opt/tmkj_transcode//include
+
+Name: libavutil
+Description: FFmpeg utility library
+Version: 55.78.100
+Requires: 
+Requires.private: 
+Conflicts:
+Libs: -L${libdir}  -lavutil -lm
+Libs.private: 
+Cflags: -I${includedir}
